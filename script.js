@@ -11,7 +11,7 @@ function hasKey(key) {
 			return arr.includes(key); ;
 		}
 	}
-	else if(key==undefined){
+	else if(key===undefined){
 		return false;
 	}
 	else{
