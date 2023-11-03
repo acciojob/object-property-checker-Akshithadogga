@@ -1,13 +1,21 @@
-const sampleObject = { red: "#FF0000", green: "#00FF00", white: "#FFFFFF" };
-
+let sampleObject = { red: "#FF0000", green: "#00FF00", white: "#FFFFFF" };
+let arr=Object.keys(sampleObject);
 function hasKey(key) {
   //   write your code here
-	let arr=Objcet.keys(sampleObject);
-	if(arr.inclue(key)){
-		return true;
+	
+	
+	if(key.length<=100){
+		 let validstr=key.match(/^[a-zA-Z0-9]+$/);
+		if(validstr){
+		
+			return arr.includes(key); ;
+		}
+	}
+	else if(key==undefined){
+		return false;
 	}
 	else{
-		retuen false;
+		return false;
 	}
 }
 
